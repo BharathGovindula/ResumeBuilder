@@ -1,0 +1,169 @@
+@layer utilities {
+  /* Keyframes */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-up {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-down {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0.3);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+    70% {
+      transform: scale(0.9);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-in-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.3s ease-in-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.3s ease-in-out;
+  }
+
+  .animate-slide-in-up {
+    animation: slide-in-up 0.3s ease-in-out;
+  }
+
+  .animate-slide-in-down {
+    animation: slide-in-down 0.3s ease-in-out;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.3s ease-in-out;
+  }
+
+  .animate-bounce-in {
+    animation: bounce-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  /* Animation Modifiers */
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-duration-fast {
+    animation-duration: 150ms;
+  }
+
+  .animate-duration-normal {
+    animation-duration: 300ms;
+  }
+
+  .animate-duration-slow {
+    animation-duration: 500ms;
+  }
+
+  /* Transition Classes */
+  .transition-transform-fast {
+    @apply transition-transform duration-150 ease-in-out;
+  }
+
+  .transition-transform-normal {
+    @apply transition-transform duration-300 ease-in-out;
+  }
+
+  .transition-transform-slow {
+    @apply transition-transform duration-500 ease-in-out;
+  }
+
+  .transition-all-fast {
+    @apply transition-all duration-150 ease-in-out;
+  }
+
+  .transition-all-normal {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .transition-all-slow {
+    @apply transition-all duration-500 ease-in-out;
+  }
+}

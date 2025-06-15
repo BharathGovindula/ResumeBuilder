@@ -1,0 +1,116 @@
+/* Resume Builder Page Styles */
+
+/* Main container */
+.resume-builder {
+  @apply max-w-7xl mx-auto p-6 space-y-8;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Section headers */
+.section-header {
+  @apply text-3xl font-bold mb-6 text-primary bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+/* Form sections */
+.form-section {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-section:hover {
+  @apply shadow-xl;
+  transform: translateY(-2px);
+}
+
+/* Input fields */
+.input-field {
+  @apply block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary-500 focus:ring-primary-500;
+  transition: all 0.3s ease;
+}
+
+/* Labels */
+.input-label {
+  @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1;
+}
+
+/* Buttons */
+.action-button {
+  @apply inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+  transition: all 0.2s ease;
+}
+
+/* Section specific styles */
+
+/* Personal Info Section */
+.personal-info-section {
+  @apply bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900;
+}
+
+/* Education Section */
+.education-section {
+  @apply bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-900;
+}
+
+/* Experience Section */
+.experience-section {
+  @apply bg-gradient-to-br from-purple-50 to-violet-50 dark:from-gray-800 dark:to-gray-900;
+}
+
+/* Skills Section */
+.skills-section {
+  @apply bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-800 dark:to-gray-900;
+}
+
+/* Projects Section */
+.projects-section {
+  @apply bg-gradient-to-br from-red-50 to-rose-50 dark:from-gray-800 dark:to-gray-900;
+}
+
+/* Preview Section */
+.preview-section {
+  @apply bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-gray-800 dark:to-gray-900;
+}
+
+/* Skill Tags */
+.skill-tag {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-100 mr-2 mb-2;
+  transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+  @apply bg-primary-200 dark:bg-primary-800;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume-builder {
+    @apply p-4;
+  }
+
+  .form-section {
+    @apply p-4;
+  }
+
+  .section-header {
+    @apply text-2xl;
+  }
+}

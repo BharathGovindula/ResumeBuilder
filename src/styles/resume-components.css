@@ -1,0 +1,125 @@
+@layer components {
+  /* Resume Builder Layout */
+  .resume-container {
+    @apply min-h-screen bg-gray-50 dark:bg-gray-900 p-4 md:p-6 lg:p-8;
+  }
+
+  .resume-sidebar {
+    @apply fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-800 shadow-lg overflow-y-auto;
+  }
+
+  .resume-main {
+    @apply ml-64 p-6;
+  }
+
+  /* Resume Section Components */
+  .section-header {
+    @apply flex items-center justify-between mb-4;
+  }
+
+  .section-title {
+    @apply text-xl font-semibold text-gray-900 dark:text-gray-100;
+  }
+
+  .section-actions {
+    @apply flex items-center space-x-2;
+  }
+
+  /* Resume Form Elements */
+  .resume-form-group {
+    @apply space-y-4 mb-6;
+  }
+
+  .resume-input {
+    @apply w-full rounded-lg border-gray-300 focus:border-primary focus:ring-primary dark:bg-gray-700 dark:border-gray-600;
+  }
+
+  .resume-textarea {
+    @apply w-full rounded-lg border-gray-300 focus:border-primary focus:ring-primary dark:bg-gray-700 dark:border-gray-600 min-h-[100px];
+  }
+
+  /* Experience & Education Items */
+  .timeline-item {
+    @apply relative pl-8 pb-8 border-l-2 border-gray-200 dark:border-gray-700;
+  }
+
+  .timeline-item::before {
+    @apply content-[''] absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary;
+  }
+
+  .timeline-item:last-child {
+    @apply border-l-0 pb-0;
+  }
+
+  /* Skills Section */
+  .skills-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+  }
+
+  .skill-item {
+    @apply flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm;
+  }
+
+  .skill-name {
+    @apply text-sm font-medium text-gray-900 dark:text-gray-100;
+  }
+
+  .skill-level {
+    @apply text-xs text-gray-500 dark:text-gray-400;
+  }
+
+  /* Projects Section */
+  .project-card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 mb-4;
+  }
+
+  .project-title {
+    @apply text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2;
+  }
+
+  .project-description {
+    @apply text-sm text-gray-600 dark:text-gray-300;
+  }
+
+  .project-tech {
+    @apply flex flex-wrap gap-2 mt-4;
+  }
+
+  .tech-tag {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300;
+  }
+
+  /* Preview Section */
+  .preview-container {
+    @apply bg-white dark:bg-gray-800 shadow-xl rounded-lg overflow-hidden;
+  }
+
+  .preview-toolbar {
+    @apply flex items-center justify-between p-4 border-b dark:border-gray-700;
+  }
+
+  .preview-content {
+    @apply p-8;
+  }
+
+  /* Template Selection */
+  .template-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .template-card {
+    @apply relative aspect-[8.5/11] rounded-lg overflow-hidden cursor-pointer border-2 hover:border-primary transition-all;
+  }
+
+  .template-preview {
+    @apply w-full h-full object-cover;
+  }
+
+  .template-overlay {
+    @apply absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity;
+  }
+
+  .template-name {
+    @apply text-white text-lg font-semibold;
+  }
+}

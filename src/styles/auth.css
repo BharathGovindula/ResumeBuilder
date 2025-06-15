@@ -1,0 +1,130 @@
+/* Auth Container Styles */
+.auth-container {
+  @apply min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4;
+}
+
+/* Auth Card Styles */
+.auth-card {
+  @apply w-full max-w-md bg-white rounded-2xl shadow-xl overflow-hidden;
+}
+
+/* Auth Header Styles */
+.auth-header {
+  @apply bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-center;
+}
+
+.auth-title {
+  @apply text-3xl font-bold text-white mb-2;
+}
+
+.auth-subtitle {
+  @apply text-blue-100 text-sm;
+}
+
+/* Auth Form Styles */
+.auth-form-container {
+  @apply p-8;
+}
+
+.auth-form {
+  @apply space-y-6;
+}
+
+.form-group {
+  @apply space-y-2;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.form-input {
+  @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors;
+}
+
+.form-input:focus {
+  @apply outline-none;
+}
+
+.auth-button {
+  @apply w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all;
+}
+
+.auth-button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Auth Error Styles */
+.auth-error {
+  @apply text-red-500 text-sm mt-1;
+}
+
+/* Auth Footer Styles */
+.auth-footer {
+  @apply mt-6 text-center text-sm text-gray-600;
+}
+
+.auth-link {
+  @apply text-blue-600 hover:text-blue-700 font-medium transition-colors;
+}
+
+/* Auth Divider Styles */
+.auth-divider {
+  @apply relative my-6;
+}
+
+.auth-divider::before {
+  @apply content-[''] absolute left-0 top-1/2 w-full h-px bg-gray-200;
+}
+
+.auth-divider-text {
+  @apply relative inline-block px-4 bg-white text-sm text-gray-500;
+}
+
+/* Social Auth Button Styles */
+.social-auth {
+  @apply grid grid-cols-2 gap-4 mt-6;
+}
+
+.social-button {
+  @apply flex items-center justify-center gap-2 w-full py-2 px-4 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors;
+}
+
+.social-button img {
+  @apply w-5 h-5;
+}
+
+/* Password Toggle */
+.password-toggle {
+  @apply absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 cursor-pointer;
+}
+
+/* Remember Me Checkbox */
+.remember-me {
+  @apply flex items-center gap-2 text-sm text-gray-600;
+}
+
+.remember-me input[type="checkbox"] {
+  @apply w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  @apply text-sm text-blue-600 hover:text-blue-700 transition-colors;
+}
+
+/* Auth Loading Styles */
+.auth-loading {
+  @apply flex items-center justify-center gap-2 text-blue-600;
+}
+
+.auth-loading-spinner {
+  @apply w-5 h-5 border-2 border-blue-600 border-t-transparent rounded-full animate-spin;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .auth-card {
+    padding: 1.5rem;
+  }
+} 

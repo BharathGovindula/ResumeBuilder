@@ -1,0 +1,122 @@
+@layer components {
+  /* Main Layout */
+  .layout {
+    @apply min-h-screen bg-gray-50 dark:bg-gray-900;
+  }
+
+  .layout-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Grid Layout */
+  .grid-container {
+    @apply grid gap-6;
+  }
+
+  .grid-cols-auto {
+    @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+  }
+
+  .grid-cols-sidebar {
+    @apply grid-cols-1 lg:grid-cols-[300px_1fr];
+  }
+
+  /* Flex Layout */
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .flex-start {
+    @apply flex items-start justify-start;
+  }
+
+  .flex-end {
+    @apply flex items-center justify-end;
+  }
+
+  /* Sidebar Layout */
+  .sidebar {
+    @apply hidden lg:flex lg:flex-col lg:w-72 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700;
+  }
+
+  .sidebar-content {
+    @apply flex-1 flex flex-col min-h-0 overflow-y-auto;
+  }
+
+  .sidebar-section {
+    @apply px-4 py-5 space-y-4;
+  }
+
+  /* Content Layout */
+  .content {
+    @apply flex-1 overflow-auto;
+  }
+
+  .content-header {
+    @apply bg-white dark:bg-gray-800 shadow;
+  }
+
+  .content-body {
+    @apply py-6;
+  }
+
+  /* Stack Layout */
+  .stack {
+    @apply space-y-4;
+  }
+
+  .stack-lg {
+    @apply space-y-8;
+  }
+
+  .stack-sm {
+    @apply space-y-2;
+  }
+
+  /* Responsive Layout */
+  .responsive-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .responsive-grid {
+    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3;
+  }
+
+  .responsive-flex {
+    @apply flex flex-col sm:flex-row items-start sm:items-center justify-between;
+  }
+
+  /* Section Layout */
+  .section-container {
+    @apply py-12;
+  }
+
+  .section-header {
+    @apply mb-8;
+  }
+
+  .section-content {
+    @apply space-y-6;
+  }
+
+  /* Panel Layout */
+  .panel {
+    @apply bg-white dark:bg-gray-800 shadow rounded-lg;
+  }
+
+  .panel-header {
+    @apply px-4 py-5 border-b border-gray-200 dark:border-gray-700 sm:px-6;
+  }
+
+  .panel-body {
+    @apply px-4 py-5 sm:p-6;
+  }
+
+  .panel-footer {
+    @apply px-4 py-4 sm:px-6 bg-gray-50 dark:bg-gray-700;
+  }
+}

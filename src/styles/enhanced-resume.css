@@ -1,0 +1,212 @@
+/* Enhanced Resume Styles */
+
+/* Global Variables */
+:root {
+  --primary-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  --secondary-gradient: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  --success-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --warning-gradient: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  --danger-gradient: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --hover-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Enhanced Resume Builder Container */
+.resume-builder {
+  @apply max-w-7xl mx-auto p-8 space-y-10;
+  background: linear-gradient(to bottom right, #f8fafc, #f1f5f9);
+  min-height: 100vh;
+}
+
+/* Enhanced Section Headers */
+.section-header {
+  @apply text-4xl font-bold mb-8;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.section-header::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-20 h-1 rounded-full;
+  background: var(--primary-gradient);
+}
+
+/* Enhanced Form Sections */
+.form-section {
+  @apply bg-white rounded-xl p-8;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-section:hover {
+  box-shadow: var(--hover-shadow);
+  transform: translateY(-2px);
+}
+
+/* Enhanced Input Fields */
+.input-field {
+  @apply block w-full rounded-lg border-gray-200 shadow-sm;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1rem;
+}
+
+.input-field:focus {
+  @apply border-primary-500 ring-2 ring-primary-500/20;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+/* Enhanced Labels */
+.input-label {
+  @apply block text-sm font-semibold text-gray-700 mb-2;
+  letter-spacing: 0.025em;
+}
+
+/* Enhanced Buttons */
+.action-button {
+  @apply inline-flex items-center px-6 py-3 rounded-lg font-medium text-white;
+  background: var(--primary-gradient);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.2);
+}
+
+.action-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(79, 70, 229, 0.3);
+}
+
+/* Enhanced Section Styles */
+.personal-info-section {
+  background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+}
+
+.education-section {
+  background: linear-gradient(135deg, #dcfce7 0%, #d1fae5 100%);
+}
+
+.experience-section {
+  background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+}
+
+.skills-section {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+}
+
+.projects-section {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+}
+
+/* Enhanced Skill Tags */
+.skill-tag {
+  @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium;
+  background: var(--secondary-gradient);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+
+/* Enhanced Preview Section */
+.preview-section {
+  @apply bg-white rounded-xl p-8;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Enhanced Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply Animations */
+.form-section {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.skill-tag {
+  animation: scaleIn 0.3s ease-out;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+  .resume-builder {
+    @apply p-4;
+  }
+
+  .form-section {
+    @apply p-6;
+  }
+
+  .section-header {
+    @apply text-3xl;
+  }
+
+  .action-button {
+    @apply px-4 py-2;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .resume-builder {
+    background: linear-gradient(to bottom right, #1e293b, #0f172a);
+  }
+
+  .form-section {
+    @apply bg-gray-800 border-gray-700;
+  }
+
+  .input-field {
+    @apply bg-gray-700 border-gray-600 text-white;
+  }
+
+  .input-label {
+    @apply text-gray-300;
+  }
+
+  .preview-section {
+    @apply bg-gray-800 border-gray-700;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .resume-builder {
+    background: none;
+    padding: 0;
+  }
+
+  .form-section {
+    box-shadow: none;
+    border: none;
+  }
+
+  .action-button {
+    display: none;
+  }
+} 

@@ -1,0 +1,126 @@
+@layer components {
+  /* Login and Register Pages */
+  .auth-page {
+    @apply min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900;
+  }
+
+  .auth-container {
+    @apply max-w-md w-full space-y-8 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg;
+  }
+
+  .auth-header {
+    @apply text-center space-y-2;
+  }
+
+  .auth-form {
+    @apply mt-8 space-y-6;
+  }
+
+  /* Resume Builder Page */
+  .resume-page {
+    @apply min-h-screen bg-gray-50 dark:bg-gray-900;
+  }
+
+  .resume-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+  }
+
+  .resume-grid {
+    @apply grid grid-cols-1 lg:grid-cols-12 gap-8;
+  }
+
+  .resume-sidebar {
+    @apply lg:col-span-3 space-y-6;
+  }
+
+  .resume-main {
+    @apply lg:col-span-9 space-y-6;
+  }
+
+  /* Resume Sections */
+  .section {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6;
+  }
+
+  .section-header {
+    @apply flex items-center justify-between mb-4;
+  }
+
+  .section-title {
+    @apply text-xl font-semibold text-gray-900 dark:text-gray-100;
+  }
+
+  /* Personal Info Section */
+  .personal-info {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+  }
+
+  /* Experience Section */
+  .experience-item {
+    @apply border-b border-gray-200 dark:border-gray-700 last:border-0 py-4;
+  }
+
+  .experience-header {
+    @apply flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2;
+  }
+
+  .experience-company {
+    @apply text-lg font-medium text-gray-900 dark:text-gray-100;
+  }
+
+  .experience-period {
+    @apply text-sm text-gray-500 dark:text-gray-400;
+  }
+
+  /* Education Section */
+  .education-item {
+    @apply border-b border-gray-200 dark:border-gray-700 last:border-0 py-4;
+  }
+
+  .education-header {
+    @apply flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2;
+  }
+
+  .education-school {
+    @apply text-lg font-medium text-gray-900 dark:text-gray-100;
+  }
+
+  .education-period {
+    @apply text-sm text-gray-500 dark:text-gray-400;
+  }
+
+  /* Skills Section */
+  .skills-grid {
+    @apply grid grid-cols-2 sm:grid-cols-3 gap-4;
+  }
+
+  .skill-item {
+    @apply flex items-center space-x-2;
+  }
+
+  /* Projects Section */
+  .project-item {
+    @apply border-b border-gray-200 dark:border-gray-700 last:border-0 py-4;
+  }
+
+  .project-header {
+    @apply flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2;
+  }
+
+  .project-title {
+    @apply text-lg font-medium text-gray-900 dark:text-gray-100;
+  }
+
+  .project-period {
+    @apply text-sm text-gray-500 dark:text-gray-400;
+  }
+
+  /* Preview Section */
+  .preview-container {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8;
+  }
+
+  .preview-actions {
+    @apply flex justify-end space-x-4 mt-4;
+  }
+}

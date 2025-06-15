@@ -1,0 +1,184 @@
+@layer components {
+  /* Header Components */
+  .header {
+    @apply bg-white dark:bg-gray-800 shadow-sm;
+  }
+
+  .header-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .header-content {
+    @apply flex justify-between items-center py-4;
+  }
+
+  .header-nav {
+    @apply flex space-x-4;
+  }
+
+  /* Form Components */
+  .form-group {
+    @apply space-y-2;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 dark:text-gray-300;
+  }
+
+  .form-input {
+    @apply block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:text-white sm:text-sm;
+  }
+
+  .form-textarea {
+    @apply block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:text-white sm:text-sm;
+  }
+
+  .form-select {
+    @apply block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:text-white sm:text-sm;
+  }
+
+  .form-checkbox {
+    @apply h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700;
+  }
+
+  .form-radio {
+    @apply h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700;
+  }
+
+  /* Button Components */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+  }
+
+  .btn-outline {
+    @apply border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700;
+  }
+
+  /* Card Components */
+  .card {
+    @apply bg-white dark:bg-gray-800 overflow-hidden rounded-lg shadow;
+  }
+
+  .card-header {
+    @apply px-4 py-5 sm:px-6;
+  }
+
+  .card-body {
+    @apply px-4 py-5 sm:p-6;
+  }
+
+  .card-footer {
+    @apply px-4 py-4 sm:px-6 bg-gray-50 dark:bg-gray-700;
+  }
+
+  /* List Components */
+  .list-group {
+    @apply divide-y divide-gray-200 dark:divide-gray-700;
+  }
+
+  .list-item {
+    @apply px-4 py-4 sm:px-6;
+  }
+
+  /* Badge Components */
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+
+  .badge-primary {
+    @apply bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100;
+  }
+
+  .badge-secondary {
+    @apply bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-100;
+  }
+
+  /* Alert Components */
+  .alert {
+    @apply rounded-md p-4;
+  }
+
+  .alert-info {
+    @apply bg-blue-50 text-blue-700 dark:bg-blue-900 dark:text-blue-100;
+  }
+
+  .alert-success {
+    @apply bg-green-50 text-green-700 dark:bg-green-900 dark:text-green-100;
+  }
+
+  .alert-warning {
+    @apply bg-yellow-50 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-100;
+  }
+
+  .alert-error {
+    @apply bg-red-50 text-red-700 dark:bg-red-900 dark:text-red-100;
+  }
+
+  /* Modal Components */
+  .modal-overlay {
+    @apply fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity;
+  }
+
+  .modal-container {
+    @apply fixed inset-0 z-10 overflow-y-auto;
+  }
+
+  .modal-content {
+    @apply relative transform overflow-hidden rounded-lg bg-white dark:bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6;
+  }
+
+  /* Tooltip Components */
+  .tooltip {
+    @apply absolute z-10 rounded bg-gray-900 px-2 py-1 text-xs text-white dark:bg-gray-100 dark:text-gray-900;
+  }
+
+  /* Navigation Components */
+  .nav {
+    @apply flex space-x-4;
+  }
+
+  .nav-link {
+    @apply text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200;
+  }
+
+  .nav-link-active {
+    @apply text-blue-600 dark:text-blue-400;
+  }
+
+  /* Table Components */
+  .table {
+    @apply min-w-full divide-y divide-gray-300 dark:divide-gray-700;
+  }
+
+  .table-header {
+    @apply bg-gray-50 dark:bg-gray-800;
+  }
+
+  .table-header-cell {
+    @apply px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-gray-100;
+  }
+
+  .table-body {
+    @apply divide-y divide-gray-200 dark:divide-gray-700 bg-white dark:bg-gray-900;
+  }
+
+  .table-row {
+    @apply hover:bg-gray-50 dark:hover:bg-gray-800;
+  }
+
+  .table-cell {
+    @apply whitespace-nowrap px-3 py-4 text-sm text-gray-500 dark:text-gray-400;
+  }
+}
